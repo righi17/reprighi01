@@ -8,4 +8,4 @@ Hello! I'm Gabriel, a data professional who specializes in building and analyzin
 ---
 ## 📊 Projects
 
-### Project 1: [E-commerce Funnel Optimization Dashboard](https://github.com/righi17/reprighi01/main/01.md)
+### Project 1: [E-commerce Funnel Optimization Dashboard](./01.md)
