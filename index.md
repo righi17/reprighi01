@@ -6,4 +6,6 @@ Hello! I'm Gabriel, a data professional who specializes in building and analyzin
 🔗 **Quick Links:** [LinkedIn](https://www.linkedin.com/in/righi/) | [GitHub](https://github.com/righi17) | [Email](mailto:gabriel.righi@hotmail.com)
 
 ---
+## 📊 Projects
 
+### Project 1: [E-commerce Funnel Optimization Dashboard](https://github.com/righi17/reprighi01/edit/main/01.md)
