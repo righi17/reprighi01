@@ -1,14 +1,14 @@
 # Gabriel Righi
 _Senior Data & Business Intelligence Analyst_
 
-Hello! I'm Gabriel, a data professional who specializes in building and analyzing business data with:
+Hello! I'm Gabriel, a data professional who specializes in building and analyzing business data with tools like:
 * Excel
 * Google Analytics 4
 * Google Sheets
 * Microsoft Power BI
 * Looker Studio
 * SQL
-* Pyhton
+* Python
 
 My passion is transforming raw data into clear, strategic insights using data storytelling techniques to drive business growth through data-driven decisions.
 
