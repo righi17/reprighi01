@@ -17,4 +17,4 @@ My passion is transforming raw data into clear, strategic insights using data st
 ---
 ## 📊 Projects
 
-### Project 1: [E-commerce Funnel Optimization Dashboard](./01.md)
+### Project 1: [Global Development Indicators Analysis](./01.md)
