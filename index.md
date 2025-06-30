@@ -18,3 +18,4 @@ My passion is transforming raw data into clear, strategic insights using data st
 ## 📊 Projects
 
 ### Project 1: [Global Development Indicators Analysis](./01.md)
+### Project 2: [Washington State EV Market Overview](./02.md)
