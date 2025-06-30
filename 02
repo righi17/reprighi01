@@ -1,0 +1,52 @@
+
+# Portfolio Project: Washington State EV Market Overview
+
+### Situation
+International development organizations, researchers, and policymakers require a clear, comprehensive view of global development trends to make informed decisions and allocate resources effectively. Raw data from sources like the UN (`HDI.csv`) and World Bank (`WorldBank.xlsx`) is often complex, spread across multiple files with different structures, and contains significant data quality issues, making it difficult to perform reliable time-series analysis or derive clear insights.
+
+This project's objective was to execute a full data analysis workflow: ingesting and cleaning these complex source files, building a unified and validated dataset, and creating a suite of interactive dashboards to explore global development patterns.
+
+### Process
+The project followed a rigorous data processing and visualization workflow, pivoting between tools (from spreadsheets to a programmatic Python environment) to overcome significant data quality challenges and produce a reliable analytical tool.
+
+1.  **Data Ingestion & Validation:**
+    * Initial exploration in Python's Pandas library revealed significant data quality issues in the raw `HDI.csv` file, including incorrectly scaled numbers (e.g., an HDI value of `825` instead of `0.825`) and mixed data types within columns.
+    * A critical data validation step was performed to investigate extreme outlier values. This process confirmed that a life expectancy of **14.1 years for Rwanda in 1994** was not a data error, but a valid data point corresponding to the Rwandan genocide, underlining the importance of contextual investigation before discarding outliers.
+
+2.  **Data Transformation & Cleaning (Python/Pandas):**
+    * A Python script was developed using the Pandas library within an Anaconda/Jupyter Notebook environment to perform a robust ETL (Extract, Transform, Load) process.
+    * **Unpivoting:** The `HDI.csv` file, which was in a wide format with hundreds of columns, was transformed into a long, tidy format using the `pandas.melt` function. This made the data suitable for time-series analysis.
+    * **Cleaning & Scaling:** A custom function was applied to programmatically correct the identified scaling issues. All relevant columns were converted to their proper numeric data types using `pd.to_numeric` with error coercion to handle missing values gracefully.
+    * **Merging:** The cleaned, unpivoted HDI data was merged with the primary `WorldBank.xlsx` data using a `left join` on country code and year, creating a single, unified master dataset.
+
+3.  **Data Export:**
+    * The final, clean, and validated DataFrame was exported to a single CSV file, `master_hdi_data_clean.csv`. This materialized dataset serves as a stable and efficient data source for the visualization phase, decoupling the data preparation from the analysis.
+
+4.  **Visualization & Data Storytelling (Looker Studio):**
+    * The clean CSV was connected to Looker Studio. A three-part, interactive dashboard report was developed to tell a coherent data story.
+    * **Dashboard 1: Global Snapshot:** Provides a high-level world map view of the most recent year's HDI, with scorecards for key global metrics and rankings for top performers.
+      
+    <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/1926d730-a6f8-479f-9f20-0a8f4bb04653/page/tOyOF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+
+    
+    * **Dashboard 2: Development Driver Exploration:** Uses interactive scatter plots to investigate the correlations between key indicators, such as GNI vs. Life Expectancy, with data points colored by income group to reveal clusters and patterns.
+  
+     <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/1926d730-a6f8-479f-9f20-0a8f4bb04653/page/p_ne2olwcptd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+
+    
+    * **Dashboard 3: Country & Region Deep Dive:** Allows a user to select a single country or region and view its specific development trajectory over three decades, using multiple time-series charts with different Y-axes to correctly visualize data of varying scales.
+  
+     <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/1926d730-a6f8-479f-9f20-0a8f4bb04653/page/p_djesq2dptd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+
+### Result
+This project successfully transformed multiple complex and error-prone raw data files into a single, validated, analysis-ready dataset. The resulting three-part Looker Studio dashboard provides a powerful tool for policymakers, researchers, and analysts to explore global development trends, compare national performance, and investigate the complex interplay between economic, health, and education indicators. The dashboard empowers users to move from a high-level global understanding to a granular, country-specific analysis seamlessly.
+
+---
+
+### Interactive Dashboards
+
+[**➡️ Open Full Report in Looker Studio**](https://lookerstudio.google.com/s/nBf9-6Lz-ck)
+
+🔗 **[Home](https://righi17.github.io/reprighi01/)** | **[LinkedIn](https://www.linkedin.com/in/righi)** | **[GitHub](https://github.com/righi17)** | **[Email](mailto:gabriel.righi@hotmail.com)**
+
+---
